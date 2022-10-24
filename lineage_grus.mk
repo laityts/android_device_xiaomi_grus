@@ -6,8 +6,13 @@
 
 $(call inherit-product, device/xiaomi/grus/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common RiceDroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+RICE_MAINTAINER := Eytan
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GMS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_ENABLE_BLUR := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_grus
